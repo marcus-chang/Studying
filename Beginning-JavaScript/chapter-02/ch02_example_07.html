@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chanpter 2, Example 7</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var myString="56.02 degrees centigrade";
+		var myInt;
+		var myFloat;
+
+		document.write("\""+myString+"\" is "+parseInt(myString, 10)+" as an integer"+"</br>");
+		/*\"是转义字符，用来输出"
+		 *parseInt()函数中的10意思是用，按照10进制方式来转换数值
+		 */
+
+		myInt=parseInt(myString, 10);
+		document.write("\""+myString+"\" when converted to an integer equals"+myInt+"</br>");
+
+		myFloat=parseFloat(myString);
+		document.write("\""+myString+"\" when converted to a floating point number equals"+myFloat);
+	</script>
+</body>
+</html>
