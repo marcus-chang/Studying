@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chanpter 3, Example 1</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var degFahren=parseInt(prompt("Enter the degrees in Fahrenheit", 50), 10);	//prompt()函数，显示提示框，并允许输入内容，50是输入框中的默认数值
+		var degCent;
+
+		degCent=5/9*(degFahren-32);	//摄氏度（C）与华氏度（F）之间的转换公式是：C=5/9(F-32)
+
+		alert(degFahren+"\xB0 Fahrenheit is"+degCent+"\xB0 centigrade");	//\xB0是转义字符，代表温度的符号"。"
+
+		if(degCent<0){
+			document.write("That's below the freezing point of water");
+		}
+
+		if(degCent==100){
+			document.write("That's the boiling point of water");
+		}
+	</script>
+</body>
+</html>
