@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 04, Example 02</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		function toCentigrade(degFahren){
+			var degCent=5/9*(degFahren-32);
+
+			document.write(degFahren+" Fahrenheit is "+degCent+" Celsius.</br>");
+		}
+
+		function toFahrenheit(degCent){
+			var degFahren=9/5*degCent+32;
+
+			document.write(degCent+" Celsius is "+degFahren+" Fahrenheit.</br>");
+		}
+
+		function convert(converter, temperature){	
+		//定义一个函数，有两个参数，参数converter是调用toFahrenheit或toCentigrade函数，参数temperature的数值直接来自于下面的23，75
+			converter(temperature);	
+			//此处的converter可以看成是toFahrenheit(temperature)或toCentigrade(temperature)函数，temperature的值直接进入这两个函数了，
+		}
+
+		convert(toFahrenheit, 23);
+		convert(toCentigrade, 75);
+	</script>
+</body>
+</html>

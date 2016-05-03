@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 04, Example 01</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		function convertToCentigrade(degFahren){	//degFahren必须与函数被调用时的变量命名一至
+			var degCent=5/9*(degFahren-32);	//degCent的作用域仅在函数内部，因此为了避免误读，应该将名称与函数外的变量名有所区分
+
+			return degCent;
+		}	//用funcition定义一个函数，所有的函数都必须在调用他的脚本之前被定义
+
+		var degFahren=[212, 32, -459.15];	//定义一个数组，包含三个数值
+
+		var degCent=[];
+		var loopCounter;
+
+		for(loopCounter=0; loopCounter<=2; loopCounter++){
+			degCent[loopCounter]=convertToCentigrade(degFahren[loopCounter]);
+		}
+
+		for(loopCounter=2; loopCounter>=0; loopCounter--){
+			document.write("Value "+loopCounter+" was "+degFahren[loopCounter]+" degree Fahrenheit");
+
+			document.write(" Which is "+degCent[loopCounter]+" degrees centigrade</br>");
+		}
+
+
+		document.write("Next is the for...in loop:</br>");
+		for(var elementIndex in degCent){	//用for...in循环代替前面的第二个for循环
+			document.write("Value "+elementIndex+" was "+degCent[elementIndex]+" degree Fahrenheit</br>");
+		}
+	</script>
+</body>
+</html>
