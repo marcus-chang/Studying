@@ -3,19 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Chanpter 3, Question 2</title>
+	<title>Chanpter 04, Question 01</title>
 	<link rel="stylesheet" href="">
 </head>
 <body>
 	<script type="text/javascript">
-		var number=parseInt(prompt("Type a number from 1 to 9"), 10);
-		var loop;
+		function timesNumber(number){
+			var firstNumber=number;
+			var lastNumber=number;
 
+			for(;lastNumber<=9;lastNumber++){
+				document.write(firstNumber+"*"+lastNumber+"="+(firstNumber*lastNumber)+"</br>");
+			}
+
+		}
+
+		var number=parseInt(prompt("Type a number from 1 to 9"), 10);
+		
 		document.write("Number is: "+number+"</br>");
 
-		for(loop=1; loop<=12; loop++){
-			document.write(number+"*"+loop+"="+(number*loop)+"</br>");
-		}
+		timesNumber(number);
 	</script>
 </body>
 </html>
