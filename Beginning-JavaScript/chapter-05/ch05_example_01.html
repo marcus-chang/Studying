@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 05, Example 01</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var myString="Welcome to Wrox books. "+"The Wrox website is www.wrox.com. "+"Visit the Wrox website today. Thanks for buying Wrox.";
+
+		var foundAtPosition=0;
+		var wroxCount=0;
+
+		while(foundAtPosition!=-1){	
+			foundAtPosition=myString.indexOf("Wrox", foundAtPosition);	//indexOf的属性有两个，第一个是要查找的字符子串，第二个是开始查找的起始位置，注意开始位置的索引号是0
+			//当foundAtPosition出现-1时，就意味着indexOf方法对字符串的遍历已经结束
+			document.write(foundAtPosition+"</br>");
+
+			if(foundAtPosition!=-1){
+				wroxCount++;
+				foundAtPosition++;
+			}
+		}
+
+		document.write("There are "+wroxCount+" occurrences of the word Wrox");
+	</script>
+</body>
+</html>
