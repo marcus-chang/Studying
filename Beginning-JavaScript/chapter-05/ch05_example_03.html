@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 05, Example 03</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var myShopping=["Eggs","Milk","Potatoes","Cereal","Banana"];
+
+		var ord=prompt("Enter 1 for alphabetical order, "+"and -1 for reverse order", -1);	//prompt函数，默认数值是1
+
+		if(ord==1){
+			myShopping.sort();
+			document.write(myShopping.join("</br>"));
+		}else if(ord==-1){
+			myShopping.sort();
+			myShopping.reverse();
+			document.write(myShopping.join("</br>"));
+		}else{
+			document.write("Input number is wrong!")
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 05, Example 03</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var numbers=[1, 2, 3, 4, 5];
+
+		function isLessThan3(value, index, array){
+			var returnValue=false;
+
+			if(value<3){
+				returnValue=true;
+			}
+
+			return returnValue;
+		}
+
+		function doubleAndAlert(value, index, array){
+			var result=value*2;
+			document.write(result+"</br>");
+			return result;
+		}
+
+		document.write("All numbers are less than 3: "+numbers.every(isLessThan3)+"</br>");
+		document.write("Some numbers are less than 3: "+numbers.some(isLessThan3)+"</br>");
+
+		if(numbers.some(isLessThan3)){
+			var result=numbers.filter(isLessThan3);
+			document.write("These numbers are less than 3: "+result+"</br>");
+		}
+
+		numbers.forEach(doubleAndAlert);
+
+		var doubleNumbers=numbers.map(doubleAndAlert);
+		document.write(doubleNumbers);
+	</script>
+</body>
+</html>
