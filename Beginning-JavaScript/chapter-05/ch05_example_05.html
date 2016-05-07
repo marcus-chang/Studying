@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 05, Example 05</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		function fix(number1, number2){
+			var div=Math.pow(10, number2);
+			number1=Math.round(number1*div)/div;
+
+			return number1;
+			
+		}
+
+		var firstNumber=prompt("Enter the firstnumber", "");
+		var SecondNumber=prompt("Enter the Secondnumber", "");
+
+		document.write(fix(firstNumber, SecondNumber));
+	</script>
+</body>
+</html>
