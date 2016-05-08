@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 05, Example 07</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var greeting;
+
+		var nowDate=new Date();
+		var nowHour=nowDate.getHours();
+		var nowMinute=nowDate.getMinutes();
+		var nowSecond=nowDate.getSeconds();
+
+		if(nowMinute<10){
+			nowMinute="0"+nowMinute;
+		}
+
+		if(nowSecond<10){
+			nowSecond="0"+nowSecond;
+		}
+
+		if(nowHour<12){
+			greeting="good morning";
+		}else if(nowHour<17){
+			greeting="good afternoon";
+		}else{
+			greeting="good evening";
+		}
+
+		document.write(greeting+" and welcome to my website.</br>");
+		document.write("According to yout clock the time is ");
+		document.write(nowHour+":"+nowMinute+":"+nowSecond+".");
+	</script>
+</body>
+</html>
