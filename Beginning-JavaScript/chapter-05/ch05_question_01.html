@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 05, Question 01</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var months=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+		var dateNow=new Date();
+		var yearNow=dateNow.getFullYear();
+		var monthNow=dateNow.getMonth()+1;	
+		//为什么一定要+1才能实现，因为在Date对象中，1月用0表示，12月用11表示，与数组的索引一样
+		var dayNow=dateNow.getDate();
+		
+
+		document.write("The current day is: "+yearNow+"."+monthNow+"."+dayNow+"</br>");
+		
+		var currentMonth=dateNow.getMonth()+1;	//还是注意1月份是从0开始索引的
+		dateNow.setMonth(currentMonth+12);
+
+
+
+		document.write("The current day is: "+yearNow+"."+monthNow+"."+dayNow+"</br>");
+	</script>
+</body>
+</html>
