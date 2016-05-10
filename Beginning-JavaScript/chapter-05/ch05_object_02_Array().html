@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 05, Object 02, Array()</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var names=[];
+
+		names[0]="American Caption";
+		names[1]="Iron Man";
+		names[2]="War Machine";
+
+		names.push("Hulk");	//向数组内添加一条记录
+
+		arrayLength=names.length;	//先缓存数组的长度
+
+		for(var number=0; number<arrayLength; number++){	
+		//当此处number<arrayLength进行判断时，也可以用number<names.length这样的语句，但是如果是大数组的话，效率不高
+			document.write(names[number]+"<br/>");
+		}
+		
+		document.write("<br/>");
+
+		var ages=[];
+
+		ages[0]="80";
+		ages[1]="40";
+		ages[2]="45";
+		ages[3]="38";
+
+		names=names.concat(ages);
+
+		arrayLengeh=names.length;
+		document.write(arrayLengeh+"</br>");
+
+		for(number=0; number<arrayLength; number++){	
+			document.write(names[number]+"<br/>");
+		}
+	</script>
+</body>
+</html>

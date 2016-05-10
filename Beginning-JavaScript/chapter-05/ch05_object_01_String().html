@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 05, Object 01, String()</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var string1=new String("Hello");
+		var string2=new String(123);
+		var string3=new String(123.456);
+
+		var string4="Hello";	//与string1的代码意思一样
+
+		document.write("The string length is: "+string1.length+"</br>");
+
+		var string5="Hello jeremy. How are you Jeremy.";
+
+		document.write(string5+"</br>");
+		
+		document.write(string5.indexOf("Jeremy")+"</br>");	//从头开始查找
+		document.write(string5.lastIndexOf("jeremy")+"</br>");	
+		//从末尾开始查找，不论怎么样，查找同样的东西，他们所在的位置结果都是一样的
+
+		document.write(string5.substr(10,8)+"</br>");	//10代表开始位置，8代表往后数8个字符
+		document.write(string5.substring(10,8)+"</br>");	
+		//10代表开始位置，8代表字符串结束位置后的一个字符位置，这里8对应的位置就相当于e，理论上结束位置应该是j，但是起始位置是后面的e，所以这里选择的是9，10位置上的字符
+
+		document.write(string5.toLowerCase()+"</br>");
+		document.write(string5.toUpperCase()+"</br>");
+
+		document.write(string5.charAt(string5.length-3)+"<br/>");
+		document.write(string5.charCodeAt(string5.length-3)+"<br/>");
+
+		for(var stringNumber=65; stringNumber<91; stringNumber++){
+			document.write(String.fromCharCode(stringNumber)+" ");	
+			//调用fromCharCode方法的时候，需要用String对象本身来调用
+		}
+		
+	</script>
+</body>
+</html>
