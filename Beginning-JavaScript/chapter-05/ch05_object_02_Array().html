@@ -39,6 +39,51 @@
 		for(number=0; number<arrayLength; number++){	
 			document.write(names[number]+"<br/>");
 		}
+
+		var slicedArray=names.slice(1,3);	//提取数组中的一部分，注意数组的索引是从0开始的
+		document.write("</br>"+slicedArray+"</br>");
+
+		var joinArray=names.join(", ");	//join()方法，用来将数组中的元素组合成一个字符串，()中的参数用来添加每个数组元素之间的间隔
+		document.write("</br>"+joinArray+"</br>");
+
+		names.sort();	//排序数组中的元素，注意此处可以不赋值，就能直接调用sort()方法
+		document.write("</br>"+names+"</br>");
+
+		names.reverse();	//反转数组中的元素顺序
+		document.write("</br>"+names+"</br>");
+
+		document.write("</br>"+names.indexOf("Iron Man")+"</br>");	//从数组前部开始查找给定字符
+		document.write("</br>"+names.lastIndexOf("War Machine")+"</br>");	//从数组后部开始查找给定字符
+
+		//以下是迭代数组，不使用循环
+		var numbers=[1,2,3,4,5];
+
+		function isLessThan3(value, index, array){
+			var returnValue=false;
+
+			if(value<=3){
+				returnValue=true;
+			}
+
+			return returnValue;
+		}
+
+		document.write("</br>"+numbers.every(isLessThan3)+"</br>");
+		document.write(numbers.some(isLessThan3)+"</br>");
+
+		if (numbers.some(isLessThan3)){
+			var result=numbers.filter(isLessThan3);
+		}
+		document.write(result+"</br>");
+
+		function doubleAndAlert(value, index, array){
+			var result=value*2;
+			document.write(result+", ");
+		}
+
+		numbers.forEach(doubleAndAlert);
+		var doubleNumbers=numbers.map(doubleAndAlert);
+		document.write(doubleNumbers+", ");
 	</script>
 </body>
 </html>
