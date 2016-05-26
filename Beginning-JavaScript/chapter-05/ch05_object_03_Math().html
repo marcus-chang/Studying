@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 05, Object 03, Math()</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var myNumber=-101;
+		document.write(Math.abs(myNumber)+"</br>");	//abs()方法，输出参数的绝对值
+
+		document.write(Math.max(12, 13, 15, 21, 45, 65, 32, 22)+"</br>");	//输出最大值
+		document.write(Math.min(12, 13, 15, 21, 45, 65, 32, 22)+"</br>");	//输出最小值
+
+		myNumber=55.5;
+		document.write(Math.round(myNumber)+"</br>");	//输出四舍五入的值
+
+		var diceThrow;
+
+		for (var throwCount=0; throwCount<10; throwCount++){	//用来随机输出色子的数字
+			diceThrow=(Math.floor(Math.random()*6)+1);	//通过random()方法随机输出0~1之间的数字，并*6（确保结果是在6以内），+1是当结果是0时输出最少是1
+			document.write(diceThrow+"</br>");
+		}
+
+		document.write(Math.pow(10,5));	//输出10的5次方
+	</script>
+</body>
+</html>
