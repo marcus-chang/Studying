@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 06, Example 01_1</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var values;
+		values=prompt("Please enter a set of comma separated values.", "Apples,Oranges,Bananas");
+
+		function splitAndReverseText(csv){
+			var parts=csv.split(",");	//split()方法按照逗号将字符串分割成数组
+			parts.reverse();	//reverse()方法将数组的所有元素反转
+
+			var reverseString=parts.join(",");	//join()方法将数组中的所有元素合并成一个字符串
+			document.write(reverseString);
+		}
+
+		splitAndReverseText(values);
+	</script>
+</body>
+</html>

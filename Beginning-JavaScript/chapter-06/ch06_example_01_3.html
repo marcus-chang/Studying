@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 06, Example 01_3</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+	var firstString;
+
+	firstString="F-14,F-15,F-16,F/A-18,F-20";
+	document.write(firstString+"</br>");
+
+	firstString=firstString.replace("F/A-18", "F-18");
+	document.write(firstString+"</br>");
+
+	document.write(firstString.search("F-20")+"</br>");	//搜索F-20字符串，如果搜索到则把对应的第一个字符的索引号输出
+
+	var matchArray=[];
+	matchArray=firstString.match("F");
+	document.write(matchArray.length+"</br>");
+
+	var myString="1997,1998,1999,2000,2000,2001,2002";
+	myMatchArray=myString.match("2000");
+	document.write(myMatchArray.length+"</br>");
+	</script>
+</body>
+</html>
