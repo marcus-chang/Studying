@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 06, Example 02</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		function documentWrite(value){
+			document.write(value+"</br>");
+		}
+
+		var myString="Paul, Paula, Pauline, paul, Paul";
+		documentWrite(myString);
+
+		var myRegExp=/Paul/gi;
+
+		var myString_1=myString.replace(myRegExp, "Ringo");
+		documentWrite(myString_1);
+
+		myRegExp=/P\w\w\w/g;
+		var myString_2=myString.replace(myRegExp, "Bing");
+		documentWrite(myString_2);
+
+		myRegExp=/Paula?/gi;
+		var myString_3=myString.replace(myRegExp, "Ding");
+		documentWrite(myString_3);
+
+		var input=prompt("Please enter a string:", "");
+
+		function isValid(value){
+			var myRegExp=/\w/gi;
+			return(myRegExp.test(value));
+		}
+
+		if (isValid(input)){
+			document.write(input+"</br>");
+		}else{
+			document.write("Wrong String"+"</br>");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 06, Example 02_2</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		function documentWrite(value1, value2){
+			document.write(value1+": "+value2+"</br>");
+		}
+
+		var myString="Paul, Paula, Pauline, paul, Paul";
+		var xString="String";
+		documentWrite(xString, myString);
+
+		var myRegExp=/^Paul/gi;
+		var myString_1=myString.replace(myRegExp, "Ringo");
+		documentWrite(myRegExp, myString_1);
+
+		myRegExp=/Paul$/gi;
+		var myString_2=myString.replace(myRegExp, "Ringo");
+		documentWrite(myRegExp, myString_2);
+
+		myRegExp=/\b/g;
+		var myString_3=myString.replace(myRegExp, "|");
+		documentWrite(myRegExp, myString_3);	
+
+		myRegExp=/\B/g;
+		var myString_4=myString.replace(myRegExp, "|");
+		documentWrite(myRegExp, myString_4);		
+
+		myRegExp=/Paul\b/gi;
+		var myString_5=myString.replace(myRegExp, "Ringo");
+		documentWrite(myRegExp, myString_5);
+
+		myString="Paul, Paula, Pauline, paul, Paul, JeanPaul";
+		documentWrite(xString, myString);
+
+		myRegExp=/Paul\b/gi;
+		var myString_6=myString.replace(myRegExp, "Ringo");
+		documentWrite(myRegExp, myString_6);
+	</script>
+</body>
+</html>
