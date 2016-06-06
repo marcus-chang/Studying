@@ -5,6 +5,13 @@
 	<title>Chapter 06, Example 03_1</title>
 </head>
 <body>
+	<script type="text/javascript">
+		var myListString="apple, 0.99, banana, 0.50, peach, 0.25, orange, 0.75";
 
+		var myRegExp=/[^a-z]+/gi;
+		var myFruitArray=myListString.split(myRegExp);
+
+		document.write(myFruitArray.join("</br>"));		
+	</script>
 </body>
 </html>
