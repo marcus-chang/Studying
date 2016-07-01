@@ -12,36 +12,18 @@
 			document.write(value1+": "+value2+"</br>");
 		}
 
-		var myString="Paul, Paula, Pauline, paul, Paul";
+		var myString="VBScript, JavaScript, PHP";
 		var xString="String";
 		documentWrite(xString, myString);
 
-		var myRegExp=/^Paul/gi;
-		var myString_1=myString.replace(myRegExp, "Ringo");
+		var myRegExp;
+		myRegExp=/\b(VB)?(Java)?Script\b/g;
+		var myString_1=myString.replace(myRegExp, "XXXX");
 		documentWrite(myRegExp, myString_1);
 
-		myRegExp=/Paul$/gi;
-		var myString_2=myString.replace(myRegExp, "Ringo");
-		documentWrite(myRegExp, myString_2);
-
-		myRegExp=/\b/g;
-		var myString_3=myString.replace(myRegExp, "|");
-		documentWrite(myRegExp, myString_3);	
-
-		myRegExp=/\B/g;
-		var myString_4=myString.replace(myRegExp, "|");
-		documentWrite(myRegExp, myString_4);		
-
-		myRegExp=/Paul\b/gi;
-		var myString_5=myString.replace(myRegExp, "Ringo");
-		documentWrite(myRegExp, myString_5);
-
-		myString="Paul, Paula, Pauline, paul, Paul, JeanPaul";
-		documentWrite(xString, myString);
-
-		myRegExp=/Paul\b/gi;
-		var myString_6=myString.replace(myRegExp, "Ringo");
-		documentWrite(myRegExp, myString_6);
+		myRegExp=/\b(VB|Java)Script\b/g;
+		var myString_2=myString.replace(myRegExp, "XXXX");
+		documentWrite(myRegExp, myString_2);		
 	</script>
 </body>
 </html>

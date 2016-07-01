@@ -8,18 +8,19 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var values;
-		values=prompt("Please enter a set of comma separated values.", "Apples,Oranges,Bananas");
+	var firstString;
 
-		function splitAndReverseText(csv){
-			var parts=csv.split(",");	//split()方法按照逗号将字符串分割成数组
-			parts.reverse();	//reverse()方法将数组的所有元素反转
+	firstString="F-14,F-15,F-16,F/A-18,F-20";
+	document.write(firstString+"</br>");
 
-			var reverseString=parts.join(",");	//join()方法将数组中的所有元素合并成一个字符串
-			document.write(reverseString);
-		}
+	var stringArray=[];
 
-		splitAndReverseText(values);
+	stringArray=firstString.split(",");
+	stringArray.reverse();
+
+	var secondString=stringArray.join(",");
+
+	document.write(secondString+"</br>");
 	</script>
 </body>
 </html>

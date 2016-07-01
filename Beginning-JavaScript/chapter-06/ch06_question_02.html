@@ -6,7 +6,14 @@
 </head>
 <body>
 	<script type="text/javascript">
+	var myString="A dog walked in off a street and ordered a finest beer.";
+	document.write(myString+"</br>");
 
+	var regExp=/\ba\b/gi;
+	var newString;
+	newString=myString.replace(regExp, "the");
+
+	document.write(newString+"</br>");
 	</script>
 </body>
 </html>

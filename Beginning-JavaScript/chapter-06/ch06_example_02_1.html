@@ -3,43 +3,45 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Chapter 06, Example 02</title>
+	<title>Chapter 06, Example 02_1</title>
 	<link rel="stylesheet" href="">
 </head>
 <body>
 	<script type="text/javascript">
-		function documentWrite(value){
-			document.write(value+"</br>");
+		function documentWrite(value1, value2){
+			document.write(value1+": "+value2+"</br>");
 		}
 
 		var myString="Paul, Paula, Pauline, paul, Paul";
-		documentWrite(myString);
+		var xString="String";
+		documentWrite(xString, myString);
 
-		var myRegExp=/Paul/gi;
-
+		var myRegExp=/^Paul/gi;
 		var myString_1=myString.replace(myRegExp, "Ringo");
-		documentWrite(myString_1);
+		documentWrite(myRegExp, myString_1);
 
-		myRegExp=/P\w\w\w/g;
-		var myString_2=myString.replace(myRegExp, "Bing");
-		documentWrite(myString_2);
+		myRegExp=/Paul$/gi;
+		var myString_2=myString.replace(myRegExp, "Ringo");
+		documentWrite(myRegExp, myString_2);
 
-		myRegExp=/Paula?/gi;
-		var myString_3=myString.replace(myRegExp, "Ding");
-		documentWrite(myString_3);
+		myRegExp=/\b/g;
+		var myString_3=myString.replace(myRegExp, "|");
+		documentWrite(myRegExp, myString_3);	
 
-		var input=prompt("Please enter a string:", "");
+		myRegExp=/\B/g;
+		var myString_4=myString.replace(myRegExp, "|");
+		documentWrite(myRegExp, myString_4);		
 
-		function isValid(value){
-			var myRegExp=/\w/gi;
-			return(myRegExp.test(value));
-		}
+		myRegExp=/Paul\b/gi;
+		var myString_5=myString.replace(myRegExp, "Ringo");
+		documentWrite(myRegExp, myString_5);
 
-		if (isValid(input)){
-			document.write(input+"</br>");
-		}else{
-			document.write("Wrong String"+"</br>");
-		}
+		myString="Paul, Paula, Pauline, paul, Paul, JeanPaul";
+		documentWrite(xString, myString);
+
+		myRegExp=/Paul\b/gi;
+		var myString_6=myString.replace(myRegExp, "Ringo");
+		documentWrite(myRegExp, myString_6);
 	</script>
 </body>
 </html>
