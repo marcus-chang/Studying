@@ -7,9 +7,20 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
+	<script type="text/javascript">
+		var localTime=new Date();
+		document.write(localTime);
 
-	<script>
+		var html="<p>UTC Time is "+localTime.toUTCString()+"</p>";
+		html+="<p>Local Time is "+localTime.toLocaleString()+"</p>";	//重点注意Locale的写法，不能写成Local
 
+		html+="<p>Time Zone Offset is "+localTime.getTimezoneOffset()+"</p>";
+		html+="<p>Using toLocaleTimeString() gives: "+localTime.toLocaleTimeString()+"</p>";
+		html+="<p>Using toTimeString() gives: "+localTime.toTimeString()+"</p>";
+		html+="<p>Using toLocaleDateString() gives: "+localTime.toLocaleDateString()+"</p>";
+		html+="<p>Using toDateString() gives: "+localTime.toDateString()+"</p>";
+
+		document.write(html);
 	</script>
 </body>
 </html>
