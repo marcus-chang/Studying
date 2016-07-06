@@ -1,0 +1,24 @@
+﻿Date Object.Set & Get UTC
+Date对象的设置和获取UTC日期与时间
+
+
+
+
+
+
+
+
+
+
+代码示例：
+	<script type="text/javascript">
+		var myDate=new Date();
+		myDate.setUTCHours(12);
+		myDate.setUTCMinutes(0);
+		myDate.setUTCSeconds(0);
+
+		var html="<p>"+myDate.toUTCString()+"</p>";
+		html+="<p>"+myDate.toLocaleString()+"</p>";
+
+		document.write(html);
+	</script>

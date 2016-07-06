@@ -1,0 +1,42 @@
+Date Object.UTC Method
+Date对象的UTC(世界时)方法
+
+	toUTCString()
+	返回UTC时间（含当前日期与时间）
+
+	toLocaleString()
+	返回当地的当前时间（计算机的时间，含当前日期与时间）
+	重点注意Locale的写法，不能写成Local
+
+	getTimezoneOffset()
+	返回时区偏移值（当地的当前时间与UTC时间的偏移值，用分钟表示）
+
+	toLocaleTimeString()
+	返回当地的当前时间（计算机的时间，仅含当前时间）
+
+	toTimeString()
+	返回当地的当前时间（与toLocaleTimeString()稍有不同，采用24小时制）
+
+	toLocaleDateString()
+	返回当地的当前日期
+
+	toDateString()
+	返回UTC的当前日期
+
+
+
+代码示例：
+	<script type="text/javascript">
+		var localTime=new Date();
+
+		var html="<p>UTC Time is "+localTime.toUTCString()+"</p>";
+		html+="<p>Local Time is "+localTime.toLocaleString()+"</p>";
+
+		html+="<p>Time Zone Offset is "+localTime.getTimezoneOffset()+"</p>";
+		html+="<p>Using toLocaleTimeString() gives: "+localTime.toLocaleTimeString()+"</p>";
+		html+="<p>Using toTimeString() gives: "+localTime.toTimeString()+"</p>";
+		html+="<p>Using toLocaleDateString() gives: "+localTime.toLocaleDateString()+"</p>";
+		html+="<p>Using toDateString() gives: "+localTime.toDateString()+"</p>";
+
+		document.write(html);
+	</script>
