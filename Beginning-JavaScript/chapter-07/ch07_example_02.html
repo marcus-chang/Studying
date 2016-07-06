@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chapter 07, Example 02</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+	var myDate=new Date();
+	myDate.setUTCHours(12);
+	myDate.setUTCMinutes(0);
+	myDate.setUTCSeconds(0);
+
+	var html="<p>"+myDate.toUTCString()+"</p>";
+	html+="<p>"+myDate.toLocaleString()+"</p>";
+
+	document.write(html);
+	</script>
+</body>
+</html>
